@@ -16,8 +16,9 @@ exports.render = function (req, res) {
     else {
         
         //display the ejs page
-        res.render('index', {
-            title: 'Feedback page'
+        res.render('feedback', {
+            title: 'Feedback page',
+            email: ''
         });
         
     }
