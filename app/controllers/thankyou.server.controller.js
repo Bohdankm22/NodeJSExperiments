@@ -2,10 +2,12 @@
 //You can require this module and use this function
 //You'll need to use Express routing functionality to utilize the controller
 exports.render = function (req, res) {
-    //read the username from body property of request object
-    var username = req.body.username;
     //make a reference to the session object
     var session = req.session;
+
+    var username = session.username;
+    var email = req.body.email;
+    var feedback = req.body.feedback;
     //store username in session object
     session.username = username;
     console.log("In index function - User name = " + session.username);
@@ -13,7 +15,10 @@ exports.render = function (req, res) {
 
     //display the ejs page
     res.render('thankyou', {
-        title: 'Thank you page'
+        title: 'Thank you page',
+        username: username,
+        email: email,
+        feedback: feedback
     });
     
     console.log("GET request - User name = " + session.username);
