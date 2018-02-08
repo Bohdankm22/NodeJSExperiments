@@ -2,20 +2,18 @@
 <html>
 <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<img src="img/nodejs_logo.png" alt="Logo">
-<h1><%= title %></h1>
+<img src="img/feedback.jpeg" alt="Logo">
 
 <form method="post">
 
-    <input type="text" placeholder="Enter your user email" name="email" value="<%= email %>"/>
+    <input type="text" placeholder="Enter your user email" name="email" value="<%= email %>" class="input-group"/>
     <br />
+    <input type="text" placeholder="Enter your user feedback" name="feedback" value="<%= feedback %>" class="input-group"/>
     <br />
-    <input type="text" placeholder="Enter your user feedback" name="feedback" value="<%= feedback %>"/>
-    <br />
-    <br />
-    <input type="submit" value="Submit" name="submit">
+    <input type="submit" value="Submit" name="submit" class="btn-success">
 
 </form>
 
