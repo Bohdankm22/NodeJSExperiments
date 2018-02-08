@@ -11,11 +11,24 @@
 <div class="container">
     <form method="post">
 
-        <input type="text" placeholder="Enter your user email" name="email" value="<%= email %>"
-               class="input-group-text"/>
-        <br/>
-        <input type="text" placeholder="Enter your user feedback" name="feedback" value="<%= feedback %>"
-               class="input-group-text"/>
+        <label>First name:
+            <input type="text" placeholder="Enter your user email" name="fname"/>
+        </label>
+        <br />
+
+        <label>Last name:
+            <input type="text" placeholder="Enter your user email" name="lname" />
+        </label>
+        <br />
+
+        <label>Email:
+            <input type="text" name="email" value="<%= email %>"/>
+        </label>
+        <br />
+
+        <label>Your comments:
+            <textarea placeholder="Enter your user feedback" name="feedback"><%= feedback %></textarea>
+        </label>
         <br/>
         <input type="submit" value="Submit" name="submit" class="btn-success">
 

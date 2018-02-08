@@ -18,7 +18,7 @@ exports.render = function (req, res) {
         //display the ejs page
         res.render('feedback', {
             title: 'Feedback page',
-            email: '',
+            email: username,
             feedback: ''
         });
         
