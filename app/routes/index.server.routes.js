@@ -10,6 +10,7 @@ module.exports = function (app) {
     var logout = require('../controllers/logout.server.controller');
     var admin = require('../controllers/admin.server.controller');
     var feedback = require('../controllers/feedback.server.controller');
+    var thankyou = require('../controllers/thankyou.server.controller');
 
     //handle the routing of get and post request
     app.get('/', index.render);
@@ -18,6 +19,7 @@ module.exports = function (app) {
     app.get('/admin', admin.render);
     app.get('/logout', logout.render);
     app.get('/feedback', feedback.render);
+    app.post('/feedback', thankyou.render);
 
     //
     app.post('/', function (req, res) {
