@@ -8,6 +8,11 @@ exports.render = function (req, res) {
     var username = session.username;
     var email = req.body.email;
     var feedback = req.body.feedback;
+    var fname = req.body.fname;
+    var lname = req.body.lname;
+    var fpizza = req.body.fpizza;
+    var fflower = req.body.fflower;
+
     //store username in session object
     session.username = username;
     console.log("In index function - User name = " + session.username);
@@ -18,7 +23,11 @@ exports.render = function (req, res) {
         title: 'Thank you page',
         username: username,
         email: email,
-        feedback: feedback
+        feedback: feedback,
+        lname: lname,
+        fname: fname,
+        fpizza: fpizza,
+        fflower: fflower
     });
     
     console.log("GET request - User name = " + session.username);
