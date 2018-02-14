@@ -2,35 +2,70 @@
 <html>
 <head>
     <title><%= title %></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <img src="img/feedback.jpeg" alt="feedback">
 
 <div class="container">
     <form method="post">
+        <table class="table table-light">
+            <tr>
+                <td class="flex-column">
+                    <label>First name:</label>
+                </td>
+                <td class="tab">
+                    <input type="text" name="fname"/>
+                </td>
+            </tr>
 
-        <label>First name:
-            <input type="text" placeholder="Enter your user email" name="fname"/>
-        </label>
-        <br />
+            <tr>
+                <td class="flex-column">
+                    <label>Last name:</label>
+                </td>
+                <td class="tab">
+                    <input type="text" name="lname"/>
+                </td>
+            </tr>
 
-        <label>Last name:
-            <input type="text" placeholder="Enter your user email" name="lname" />
-        </label>
-        <br />
+            <tr>
+                <td>
+                    <label >Email:</label>
+                </td>
+                <td>
+                    <input type="text" name="email" value="<%= email %>"/>
+                </td>
+            </tr>
 
-        <label>Email:
-            <input type="text" name="email" value="<%= email %>"/>
-        </label>
-        <br />
+            <tr>
+                <td>
+                    <label >Favourite flower:</label>
+                </td>
+                <td>
+                    <input type="text" name="flower"/>
+                </td>
+            </tr>
 
-        <label>Your comments:
-            <textarea placeholder="Enter your user feedback" name="feedback"><%= feedback %></textarea>
-        </label>
-        <br/>
-        <input type="submit" value="Submit" name="submit" class="btn-success">
+            <tr>
+                <td>
+                    <label >Favourite pizza type:</label>
+                </td>
+                <td>
+                    <input type="text" name="pizza"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label >Your comments:</label>
+                </td>
+                <td>
+                    <textarea class="input-group-text" placeholder="Enter your user feedback" name="feedback"><%= feedback %></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Submit" name="submit" class="btn btn-success">
 
     </form>
 </div>
