@@ -1,75 +1,112 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+    <!-- Website CSS style -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
     <title><%= title %></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<img src="img/feedback.jpeg" alt="feedback">
-
 <div class="container">
-    <form method="post">
-        <table class="table table-light">
-            <tr>
-                <td>
-                    <label>First name:</label>
-                </td>
-                <td>
-                    <input type="text" name="fname"/>
-                </td>
-            </tr>
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title"><%= title %></h1>
+                <hr/>
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post">
 
-            <tr>
-                <td>
-                    <label>Last name:</label>
-                </td>
-                <td>
-                    <input type="text" name="lname"/>
-                </td>
-            </tr>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">First name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="fname" id="fname"
+                                   placeholder="Enter your first name"/>
+                        </div>
+                    </div>
+                </div>
 
-            <tr>
-                <td>
-                    <label >Email:</label>
-                </td>
-                <td>
-                    <input type="text" name="email" value="<%= email %>"/>
-                </td>
-            </tr>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Last name</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="lname" id="lname"
+                                   placeholder="Enter your last name"/>
+                        </div>
+                    </div>
+                </div>
 
-            <tr>
-                <td>
-                    <label >Favourite flower:</label>
-                </td>
-                <td>
-                    <input type="text" name="fflower"/>
-                </td>
-            </tr>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Email</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="email" id="email"
+                                   value="<%= email %>"/>
+                        </div>
+                    </div>
+                </div>
 
-            <tr>
-                <td>
-                    <label >Favourite pizza type:</label>
-                </td>
-                <td>
-                    <input type="text" name="fpizza"/>
-                </td>
-            </tr>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Favourite flower</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="fflower" id="fflower"
+                                   placeholder="Enter your favourite flower"/>
+                        </div>
+                    </div>
+                </div>
 
-            <tr>
-                <td>
-                    <label >Your comments:</label>
-                </td>
-                <td>
-                    <textarea class="input-group-text" placeholder="Enter your user feedback" name="feedback"><%= feedback %></textarea>
-                </td>
-            </tr>
-        </table>
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Favourite pizza type</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="fpizza" id="fpizza"
+                                   placeholder="Enter your favourite pizza type"/>
+                        </div>
+                    </div>
+                </div>
 
-        <input type="submit" value="Submit" name="submit" class="btn btn-success">
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Your Feedback</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="feedback" id="feedback"
+                                   placeholder="Enter your favourite pizza type"/>
+                        </div>
+                    </div>
+                </div>
 
-    </form>
+                <div class="form-group">
+                    <button type="submit" name="submit" class="btn btn-primary btn-lg btn-block login-button">Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
 </body>
-
 </html>
