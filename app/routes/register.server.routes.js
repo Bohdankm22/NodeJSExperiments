@@ -6,8 +6,10 @@
 module.exports = function (app) {
     //load the controllers
     var login = require('../controllers/register.server.controller');
+    var register = require('../controllers/registered.server.controller');
 
 
     //handle the routing of get
     app.get('/register', login.render);
+    app.post('/register', register.render);
 };
