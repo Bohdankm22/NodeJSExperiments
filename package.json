@@ -1,8 +1,8 @@
 {
-  "name": "firstnodejs",
+  "name": "AuthenticationProject",
   "version": "0.0.0",
-  "private": true,
-  "scripts": {},
+  "description": "Lab2",
+  "main": "server.js",
   "author": {
     "name": "bohdan",
     "email": "bohdansharipov@gmail.com"
@@ -15,6 +15,7 @@
     "method-override": "2.3.6",
     "express-session": "1.14.1",
     "ejs": "2.5.2",
-    "bootstrap": "^4.0.0"
+    "bootstrap": "^4.0.0",
+    "mongoose": "^5.0.6"
   }
 }
