@@ -17,7 +17,8 @@ exports.create = function (req, res, next) {
             return next(err);
         } else {
             res.render('index', {
-                title: 'Login page'
+                title: 'Login page',
+                username: user.username
             });
 
             console.log("User saved to DB");

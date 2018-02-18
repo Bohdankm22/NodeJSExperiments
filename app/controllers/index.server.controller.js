@@ -17,7 +17,8 @@ exports.render = function (req, res) {
         
         //display the ejs page
         res.render('index', {
-            title: 'Login page'
+            title: 'Login page',
+            username: username
         });
         
     }
