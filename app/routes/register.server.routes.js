@@ -11,5 +11,5 @@ module.exports = function (app) {
 
     //handle the routing of get
     app.get('/register', login.render);
-    app.post('/register', register.render);
+    app.post('/register', register.create);
 };
