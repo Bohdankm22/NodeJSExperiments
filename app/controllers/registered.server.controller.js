@@ -3,7 +3,7 @@
 //You'll need to use Express routing functionality to utilize the controller
 
 var User = require('mongoose').model('User');
-//
+
 // Create a new 'create' controller method
 exports.create = function (req, res, next) {
     // Create a new instance of the 'User' Mongoose model
