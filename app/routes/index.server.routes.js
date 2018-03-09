@@ -20,6 +20,7 @@ module.exports = function (app) {
     app.get('/logout', logout.render);
     app.get('/feedback', feedback.render);
     app.post('/feedback', thankyou.render);
+    app.post('/thankyou', thankyou.render);
 
     //
     app.post('/', function (req, res) {
