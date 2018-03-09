@@ -28,18 +28,18 @@ exports.render = function (req, res) {
             session.lastName = user.lastName;
 
             if (username === 'admin') {
-                var feedback = Feedback.find({}, function (err, feedback) {
+                Feedback.find({}, function (err, feedback) {
                     if (err) {
                         return next(err);
                     } else {
-                        return feedback;
+                        res.render('responses', {
+                            title: 'Responses page',
+                            username: user.username,
+                            feedback: feedback
+                        });
                     }
                 });
-                res.render('responses', {
-                    title: 'Responses page',
-                    username: user.username,
-                    feedback: feedback
-                });
+
             } else {
                 res.render('feedback', {
                     title: 'Feedback page',
