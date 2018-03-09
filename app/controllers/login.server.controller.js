@@ -3,6 +3,8 @@
 //You'll need to use Express routing functionality to utilize the controller
 
 var User = require('mongoose').model('User');
+var Feedback = require('mongoose').model('Feedback');
+
 
 exports.render = function (req, res) {
     //make a reference to the session object
@@ -25,10 +27,26 @@ exports.render = function (req, res) {
             session.firstName = user.firstName;
             session.lastName = user.lastName;
 
-            res.render('feedback', {
-                title: 'Feedback page',
-                username: user.username
-            });
+            if (username === 'admin') {
+                var feedback = Feedback.find({}, function (err, feedback) {
+                    if (err) {
+                        return next(err);
+                    } else {
+                        return feedback;
+                    }
+                });
+                res.render('responses', {
+                    title: 'Responses page',
+                    username: user.username,
+                    feedback: feedback
+                });
+            } else {
+                res.render('feedback', {
+                    title: 'Feedback page',
+                    username: user.username
+                });
+            }
+
         }
     });
 

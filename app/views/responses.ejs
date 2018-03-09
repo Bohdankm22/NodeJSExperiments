@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <title><%= title %></title>
+</head>
+<body>
+<div class="container">
+    <div class="row main">
+        <div class="panel-heading">
+            <div class="panel-title text-center">
+                <h1 class="title"><%= title %></h1>
+                <hr/>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="main-login main-center">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>Username</th>
+                    <th>Feedback</th>
+                    <th>Favourite flower</th>
+                    <th>Favourite pizza</th>
+                </tr>
+                <% if(feedback.length){
+                for(var i = 0;i < data.length;i++) { %>
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=feedback[i].username%></td>
+                    <td><%=feedback[i].feedback%></td>
+                    <td><%=feedback[i].fflower%></td>
+                    <td><%=feedback[i].fpizza%></td>
+                </tr>
+                <% }
+                }else{ %>
+                <tr>
+                    <td colspan="3">No feedback</td>
+                </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+</body>
+</html>
